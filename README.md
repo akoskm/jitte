@@ -1,7 +1,16 @@
 ##Introduction
 
 Utilizing a scissor, paper and a little glue, jitte was forged in three days. It's primary purpose is web service testing, but practically it can even drive simple webpages.
-Despite the fact that it's written in Python, it's actually used through the command line, where it requires only two positional arguments, the first one is the path to the test script (see below), and the second argument is a path where the results of the tests will be saved. Plain and simple.
+Despite the fact that it's written in Python, it's actually used through the command line, where it requires only two positional arguments, the first one is the path to the test script (see below), and the second argument is a path where the results of the tests will be saved. Plain and simple, like:
+
+    $ ./jitte.sh samples/get-get/test ../testrun
+    Requesting => https://api.twitter.com/1/users/show.json
+    Requesting => http://maps.googleapis.com/maps/api/geocode/json
+    Requesting => https://api.twitter.com/1/users/show.json
+    ===================
+    Tests run: 3
+    0 failed. 3 passed.
+    ===================
 
 ##Test Scripts
 
