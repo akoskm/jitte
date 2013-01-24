@@ -1,0 +1,2 @@
+include README.md
+recursive-include jitte *.py *.html *.js *.css

@@ -1,0 +1,90 @@
+{
+    "1" : {
+            "url" : "http://httpbin.org/post", 
+            "method" : "POST",
+            "send_data" : [
+                {
+                    "param_name" : {
+                        "value" : "description",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "Super-secret Login parameters",
+                        "type" : "static"
+                    }
+                },
+                {
+                    "param_name" : {
+                        "value" : "username",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "randomuser",
+                        "type" : "static"
+                    }
+                },
+                {
+                    "param_name" : {
+                        "value" : "password",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "randompass",
+                        "type" : "static"
+                    }
+                }
+            ],
+            "assume" : [
+                {
+                    "type" : "status_code",
+                    "expected": "200",
+                    "pass_if" : "eq"
+                },
+                {
+                    "type" : "json",
+                    "got" : ["json"],
+                    "pass_if" : "empty"
+                }
+            ],
+            "next" : "2"
+        },
+    "2" : {
+        "url" : "http://httpbin.org/get", 
+        "method" : "GET",
+        "send_data" : [
+            {
+                "param_name" : {
+                    "value" : "description",
+                    "type" : "static"
+                },
+                "param_value" : {
+                    "value" : "Sends a value received in the previous request",
+                    "type" : "static"
+                }
+            },
+            {
+                "param_name" : {
+                    "value" : "token",
+                    "type" : "static"
+                },
+                "param_value" : {
+                    "value" : ["headers", "Host"],
+                    "type" : "json"
+                }
+            }
+        ],
+        "assume" : [
+            {
+                "type" : "status_code",
+                "expected": "200",
+                "pass_if" : "eq"
+            },
+            {
+                "type" : "json",
+                "got" : ["args", "token"],
+                "pass_if" : "eq",
+                "expected" : "httpbin.org"
+            }
+        ]
+    }
+}

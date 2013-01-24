@@ -1,0 +1,109 @@
+{
+    "1" : {
+            "url" : "https://api.twitter.com/1/users/show.json", 
+            "method" : "GET",
+            "send_data" : [
+                {
+                    "param_name" : {
+                        "value" : "screen_name",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "TwitterAPI",
+                        "type" : "static"
+                    }
+                },
+                {
+                    "param_name" : {
+                        "value" : "include_entities",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "true",
+                        "type" : "static"
+                    }
+                }
+            ],
+            "assume" : [
+                {
+                    "type" : "status_code",
+                    "expected": "200",
+                    "pass_if" : "eq"
+                },
+                {
+                    "type" : "json",
+                    "got" : ["location"],
+                    "pass_if" : "eq",
+                    "expected": "San Francisco, CA"
+                }
+            ],
+            "next" : "2"
+        },
+    "2" : {
+            "url" : "http://maps.googleapis.com/maps/api/geocode/json", 
+            "method" : "GET",
+            "send_data" : [
+                {
+                    "param_name" : {
+                        "value" : "address",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : ["location"],
+                        "type" : "json"
+                    }
+                },
+                {
+                    "param_name" : {
+                        "value" : "sensor",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "false",
+                        "type" : "static"
+                    }
+                }
+            ],
+            "assume" : [
+                {
+                    "type" : "status_code",
+                    "expected": "200",
+                    "pass_if" : "eq"
+                }
+            ],
+            "next" : "3"
+        },
+        "3" : {
+            "url" : "https://api.twitter.com/1/users/show.json", 
+            "method" : "GET",
+            "send_data" : [
+                {
+                    "param_name" : {
+                        "value" : "screen_name",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "TwitterAPI",
+                        "type" : "static"
+                    }
+                },
+                {
+                    "param_name" : {
+                        "value" : "include_entities",
+                        "type" : "static"
+                    },
+                    "param_value" : {
+                        "value" : "true",
+                        "type" : "static"
+                    }
+                }
+            ],
+            "assume" : [
+                {
+                    "type" : "json",
+                    "got" : ["location"],
+                    "pass_if" : "nempty"
+                }
+            ]
+        }
+}
