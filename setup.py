@@ -11,4 +11,8 @@ setup(
     install_requires=['requests', 'lxml', 'jinja2'],
     url='http://github.com/integricho/jitte/',
     zip_safe=False,
+    scripts=[
+        'jitte/jitte.sh',
+        'jitte/runtests.sh'
+    ]
 )

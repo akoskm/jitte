@@ -12,6 +12,18 @@ Despite the fact that it's written in Python, it's actually used through the com
     0 failed. 3 passed.
     ===================
 
+##Installation
+
+    sudo python setup.py install
+
+Somewhere, near the end of the installation you will see something like:
+
+    Installed /usr/local/lib/python2.7/dist-packages/jitte-0.1-py2.7.egg
+
+now you can start jitte with ./jitte.sh from here:
+
+    /usr/local/lib/python2.7/dist-packages/jitte-0.1-py2.7.egg/jitte
+
 ##Test Scripts
 
 One could easily pick up the meta language for writing test scripts, as it uses the well known JSON format, with a couple of chosen keywords. By peeking into the samples folder it should be pretty straightforward what is going on, but nevertheless it deserves a little explanation. Let's look at a sample step:
