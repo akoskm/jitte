@@ -46,7 +46,7 @@ One could easily pick up the meta language for writing test scripts, as it uses 
             "assume" : [
                 {
                     "type" : "status_code",
-                    "value": "200",
+                    "expected": "200",
                     "pass_if" : "eq"
                 }
             ],
