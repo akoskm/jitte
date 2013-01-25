@@ -39,7 +39,7 @@ class TestCase(object):
                 else:
                     result['result'] = 'OK'
 
-        result['duration'] = '{:.5f}'.format(time.time() - start)
+        result['duration'] = '{0:.5f}'.format(time.time() - start)
         return result
 
     def _make_request(self):

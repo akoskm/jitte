@@ -34,9 +34,9 @@ class Summary(object):
             "date": 'timestamphere',
             "total": test_total,
             "pass": ok,
-            "pass_pct": '{:.2%}'.format(pass_pct),
+            "pass_pct": '{0:.2%}'.format(pass_pct),
             "fail": fail,
-            "fail_pct": '{:.2%}'.format(fail_pct),
+            "fail_pct": '{0:.2%}'.format(fail_pct),
             "tests": self.results
         }
         return summary
