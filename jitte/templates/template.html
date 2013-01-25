@@ -77,7 +77,7 @@
                             {% for assumption in test.assumptions %}
                             <div>
                                 <p class="bold">Assumption {{ loop.index }}</p>
-                                <li>Expected <pre>{{ assumption.value }}</pre></li>
+                                <li>Expected <pre>{{ assumption.expected }}</pre></li>
                                 {% if test.got %}
                                 <li>Got <pre>{{ test.got }}</pre></li>
                                 {% endif %}
