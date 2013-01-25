@@ -1,2 +1,2 @@
 include README.md
-recursive-include jitte *.py *.html *.js *.css *.md *.json
+recursive-include jitte *.py *.html *.js *.css *.md *.json *.png
