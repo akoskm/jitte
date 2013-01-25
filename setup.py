@@ -8,7 +8,7 @@ setup(
     version='0.1',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=['requests', 'lxml', 'jinja2'],
+    install_requires=['requests', 'lxml', 'jinja2', 'argparse'],
     url='http://github.com/integricho/jitte/',
     zip_safe=False,
     scripts=[
