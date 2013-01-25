@@ -1,2 +1,3 @@
 include README.md
+recursive-include jitte/samples test *.md
 recursive-include jitte *.py *.html *.js *.css
