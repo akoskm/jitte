@@ -51,10 +51,12 @@ class TestCase(object):
             raise TestError(msg)
 
         try:
+            key = 'params' if isinstance(send_data, dict) else 'data'
+            kwargs = {key: send_data}
             reply = requests.request(self.method,
                                      self.url,
-                                     params=send_data,
-                                     headers=self.headers)
+                                     headers=self.headers,
+                                     **kwargs)
         except requests.exceptions.RequestException as exc:
             msg = 'Request failed: {0}'.format(exc)
             raise TestError(msg)
