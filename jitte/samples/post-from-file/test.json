@@ -1,0 +1,21 @@
+{
+    "1" : {
+            "url" : "http://httpbin.org/post", 
+            "method" : "POST",
+            "send_data" : [
+                {
+                    "param_value" : {
+                        "value" : "/home/akoskm/tmp/payload.xml",
+                        "type" : "file"
+                    }
+                }
+            ],
+            "assume" : [
+                {
+                    "type" : "status_code",
+                    "expected": "201",
+                    "pass_if" : "eq"
+                }
+            ]
+        }
+}
