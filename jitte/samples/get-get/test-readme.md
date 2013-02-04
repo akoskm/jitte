@@ -1,12 +1,15 @@
+# Intro
+
 The following example will give you a basic introduction to jitte's testing methodology, workflow and flexibility.
 Note that the test scenarios are for demonstration purpose.
 
-Tests:
+# Scenario
+
 1. retrieve TwitterAPI's profile, check if the "location" element of the response equals to "San Francisco, CA"
 2. pass the value of the "location" field obtained in the previous response to a Google Map web service, check if the response code got from Google Map service equals to 200
 3. repeat the first step but now instead of comparing the value of "location", check only that it's not empty
 
-Line-by-line walkthrough:
+# Line-by-line walkthrough:
 
 Every test structure begins with the order of the test case. Since you can execute tests consecutively it is important to order them.
 
