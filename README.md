@@ -15,8 +15,6 @@ Despite the fact that it's written in Python, it's actually used through the com
     0 failed. 3 passed.
     ===================
 
-http://i47.tinypic.com/1glp9c.png
-
 ##Installation
 
     sudo python setup.py install
