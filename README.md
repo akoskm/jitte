@@ -1,5 +1,11 @@
 ![web component logo](http://i50.tinypic.com/2ezms1l.png)
 
+Table of Contents
+-----------------
+* [Introduction](#introduction)
+* [Installation](#installation)
+* [Test Scripts](#test-scripts)
+* [Samples](#samples)
 
 ##Introduction
 
@@ -67,3 +73,6 @@ A test is separated into one or more steps, and we are looking at the first step
 * 'headers' - an object containing key/value pairs, representing the request header names and values
 * 'assume' - a list of objects where each object is an assumption about the expected value, snippet or status code of the response. The assumption type specifies what will be verified in the response, the status code, the whole response as string or to find an exact value in the response, either by using an XPath expression (for XML / HTML files) or by using a list of strings (for JSON responses). The two latter checks would require one additional parameter, a value to be compared with the found one. The 'pass_if' parameter is just a logical operator, so the assumption will evaluate to true if the response is equal, not equal, contains or does not contain the expected value.
 * 'next' - indicates the next step where the program will jump after completing the current step.
+
+## Samples
+To get started take a look at [jitte samples](https://github.com/integricho/jitte/wiki/Samples).
