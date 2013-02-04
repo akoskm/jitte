@@ -5,7 +5,7 @@
             "send_data" : [
                 {
                     "param_value" : {
-                        "value" : "/home/akoskm/tmp/payload.xml",
+                        "value" : "samples/post-from-file/payload.xml",
                         "type" : "file"
                     }
                 }
