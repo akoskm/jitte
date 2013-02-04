@@ -1,3 +1,6 @@
+![web component logo](http://i50.tinypic.com/2ezms1l.png)
+
+
 ##Introduction
 
 Utilizing a scissor, paper and a little glue, jitte was kickstarted in a weekend. It's primary purpose is web service testing, but practically it can even drive simple webpages.
@@ -11,6 +14,8 @@ Despite the fact that it's written in Python, it's actually used through the com
     Tests run: 3
     0 failed. 3 passed.
     ===================
+
+http://i47.tinypic.com/1glp9c.png
 
 ##Installation
 
